@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string> UIButton *rightBtn = [[UIButton alloc] init];
+    [rightBtn setContentHorizontalAlignment:(UIControlContentHorizontalAlignmentRight)];
+    [rightBtn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+    [rightBtn setTitle:@"退出" forState:UIControlStateNormal];
+    [rightBtn setImage:[UIImage imageNamed:@"Close"] forState:UIWindowLevelNormal];
+    rightBtn.frame = CGRectMake(0, 0, 60, 44);
+    [rightBtn setTitleEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0 )]; // 文字距离右边距20
+    [rightBtn setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 2.5)]; // 图片距离文字
+    rightBtn.showsTouchWhenHighlighted = YES;
+    rightBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -5, 0, 0);
+    // 重点位置开始
+    [rightBtn addTarget:self action:@selector(loginOut) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *rightItemBtn = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
+    self.navigationItem.rightBarButtonItem = rightItemBtn;</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>4E3148CC-2E16-498A-A217-70823652E2F4</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>rightBtn</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>文字在右图片在做按钮</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

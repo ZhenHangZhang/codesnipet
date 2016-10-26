@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>tabbar</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>/**
+ *  tabBarItem 的选中和不选中文字属性
+ */
+- (void)setUpTabBarItemTextAttributes{
+    
+    // 普通状态下的文字属性
+    NSMutableDictionary *normalAttrs = [NSMutableDictionary dictionary];
+    normalAttrs[NSForegroundColorAttributeName] = [UIColor grayColor];
+    
+    // 选中状态下的文字属性
+    NSMutableDictionary *selectedAttrs = [NSMutableDictionary dictionary];
+    selectedAttrs[NSForegroundColorAttributeName] = [UIColor darkGrayColor];
+    
+    // 设置文字属性
+    UITabBarItem *tabBar = [UITabBarItem appearance];
+    [tabBar setTitleTextAttributes:normalAttrs forState:UIControlStateNormal];
+    [tabBar setTitleTextAttributes:normalAttrs forState:UIControlStateHighlighted];
+    
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>89F59B04-CF3B-468D-9C89-84563D1EA042</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>tabbar</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>tabbar的文字属性</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

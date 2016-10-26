@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>NavBar</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)setUpNavigationBarAppearance {
+    UINavigationBar *navigationBarAppearance = [UINavigationBar appearance];
+    
+    UIImage *backgroundImage = nil;
+    NSDictionary *textAttributes = nil;
+    
+    if (NSFoundationVersionNumber &gt; NSFoundationVersionNumber_iOS_6_1) {
+        backgroundImage = [UIImage imageNamed:@"navigationbar_background_tall"];
+        
+        textAttributes = @{
+                           NSFontAttributeName: [UIFont boldSystemFontOfSize:18],
+                           NSForegroundColorAttributeName: [UIColor blackColor],
+                           };
+    } else {
+#if __IPHONE_OS_VERSION_MIN_REQUIRED &lt; __IPHONE_7_0
+        backgroundImage = [UIImage imageNamed:@"navigationbar_background"];
+        
+        textAttributes = @{
+                           UITextAttributeFont: [UIFont boldSystemFontOfSize:18],
+                           UITextAttributeTextColor: [UIColor blackColor],
+                           UITextAttributeTextShadowColor: [UIColor clearColor],
+                           UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetZero],
+                           };
+#endif
+    }
+    
+    [navigationBarAppearance setBackgroundImage:backgroundImage
+                                  forBarMetrics:UIBarMetricsDefault];
+    [navigationBarAppearance setTitleTextAttributes:textAttributes];
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>F0B54D3E-C1FE-4C02-A03B-4BB7110E9F7E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>NavBar</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>设置NavigationBar的样式</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

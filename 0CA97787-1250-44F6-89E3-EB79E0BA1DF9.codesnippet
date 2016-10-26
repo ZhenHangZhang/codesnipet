@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>searbarTest</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.placeholder = @"搜索你想去的地方";
+        self.font = [UIFont systemFontOfSize:16];
+        // 设置背景
+        self.backgroundColor = [UIColor yellowColor];
+        // 设置内容 -- 垂直居中
+        self.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        // 设置左边显示一个放大镜
+        UIImageView *leftView = [[UIImageView alloc] init];
+        leftView.image = [UIImage imageNamed:@"main_title"];
+        leftView.bounds = CGRectMake(0, 0, leftView.image.size.width + 10, leftView.image.size.height);
+        // 设置leftView的内容居中
+        leftView.contentMode = UIViewContentModeCenter;
+        self.leftView = leftView;
+        // 设置左边的view永远显示
+        self.leftViewMode = UITextFieldViewModeAlways;
+        // 设置右边永远显示清除按钮
+        self.clearButtonMode = UITextFieldViewModeAlways;
+        self.layer.cornerRadius = 10;
+        self.layer.masksToBounds = YES;
+        self.alpha = 0.3;
+    }
+    return self;
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>0CA97787-1250-44F6-89E3-EB79E0BA1DF9</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>searbarTest</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>自定义搜索框</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

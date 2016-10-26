@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>drawline</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>-(void)drawLine:(CGRect)rect {
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    //边缘样式
+    CGContextSetLineCap(context, kCGLineCapRound);
+    // 线的宽度
+    CGContextSetLineWidth(context, 2);
+    CGContextSetAllowsAntialiasing(context, true);
+    //线的颜色
+    CGContextSetRGBStrokeColor(context, 255, 0, 0, 1.0);
+    CGContextBeginPath(context);
+        //起点
+        CGContextMoveToPoint(context, 12, 0);
+        //终点坐标
+        CGContextAddLineToPoint(context, 12, rect.size.height);
+    CGContextStrokePath(context);
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>D500B2D0-BB98-4092-A869-146F270D1784</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>drawline</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>画线</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

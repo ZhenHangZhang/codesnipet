@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>colloctionView</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+  layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+  layout.itemSize = CGSizeMake(self.view.frame.size.width, 44);
+  layout.minimumLineSpacing = 0;
+  self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds
+                                           collectionViewLayout:layout];
+  [self.view addSubview:self.collectionView];
+  self.collectionView.delegate = self;
+  self.collectionView.dataSource = self;
+  self.collectionView.showsVerticalScrollIndicator = YES;
+  [self.collectionView registerClass:[UICollectionViewCell class]
+          forCellWithReuseIdentifier:&lt;#kCellIdentifier#&gt;];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B0CBBFC1-4A83-4D43-A381-EE9F3F029D51</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>colloctionView</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>集合视图</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

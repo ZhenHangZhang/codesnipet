@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>drawcircle</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//画圆
+-(void)drawCircle:(CGPoint)center radius:(float)radius{
+    //一个不透明类型的Quartz 2D绘画环境,相当于一个画布,你可以在上面任意绘画
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    /*画圆*/
+    UIColor*aColor = [UIColor colorWithRed:1 green:0.0 blue:0 alpha:1];
+    CGContextSetFillColorWithColor(context, aColor.CGColor);//填充颜色
+    CGContextSetLineWidth(context, 0.1);//线的宽度
+    CGContextAddArc(context, 12, center.y, radius, 0, 2*PI, 0);
+    //添加一个圆
+    //kCGPathFill填充非零绕数规则,kCGPathEOFill表示用奇偶规则,kCGPathStroke路径,kCGPathFillStroke路径填充,kCGPathEOFillStroke表示描线，不是填充
+        CGContextDrawPath(context, kCGPathFillStroke); //绘制路径加填充
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>69EA9361-91D0-4C7A-893F-512395F79566</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>drawcircle</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>划圆</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

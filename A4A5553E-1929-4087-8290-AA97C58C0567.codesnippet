@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>scrollView</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//设置委托
+self.scrollView.delegate = self;
+//设置背景颜色
+self.scrollView.backgroundColor = [UIColor blackColor];
+//设置取消触摸
+self.scrollView.canCancelContentTouches = NO;
+//设置滚动条类型
+self.scrollView.indicatorStyle = UIScrollViewIndicatorStyleWhite;
+//是否自动裁切超出部分
+self.scrollView.clipsToBounds = YES;
+//设置是否可以缩放
+self.scrollView.scrollEnabled = YES;
+//设置是否可以进行画面切换
+self.scrollView.pagingEnabled = YES;
+//设置在拖拽的时候是否锁定其在水平或者垂直的方向
+self.scrollView.directionalLockEnabled = NO;
+//隐藏滚动条设置（水平、跟垂直方向）
+self.scrollView.alwaysBounceHorizontal = NO;
+self.scrollView.alwaysBounceVertical = NO;
+self.scrollView.showsHorizontalScrollIndicator = NO;
+self.scrollView.showsVerticalScrollIndicator = NO;
+
+[self.scrollView setContentSize:CGSizeMake(originX, self.scrollView.bounds.size.height)];
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>A4A5553E-1929-4087-8290-AA97C58C0567</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>scrollView</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>滚动视图</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
